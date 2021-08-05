@@ -8,7 +8,7 @@ The Fjord consumer is a process that attaches to a Kafka cluster, consumes recor
 
 ## How is the Fjord Consumer Deployed?
 
-It's possible to run the Fjord consumer locally. However, the dockerized consumer is generally intended to be deployed with the entire Fjord infrastructure on AWS, which can be done without using any code in this repo. If you'd like to deploy the entire Fjord infrastructure, please see the `deploy` repo. If you wish to test the consumer locally, please continue reading below.
+It's possible to run the Fjord consumer locally. However, the dockerized consumer is generally intended to be deployed with the entire Fjord infrastructure on AWS, which can be done without using any code in this repo. If you'd like to deploy the entire Fjord infrastructure, please see the [deploy](https://github.com/fjord-framework/deploy) repo. If you wish to test the consumer locally, please continue reading below.
 
 ## How is the Fjord Consumer Run Locally?
 
@@ -26,7 +26,7 @@ It's also necessary to install and run Redis when running the consumer locally. 
 
 #### Fjord Server
 
-If you're running a complete local setup of all Fjord components, you should already have the Fjord server running by this point as well, so that when Redis receives new records, the server will be able to subscribe and receive them. Please see the `server` repo and follow the instructions there if you have not done so already.
+If you're running a complete local setup of all Fjord components, you should already have the Fjord server running by this point as well, so that when Redis receives new records, the server will be able to subscribe and receive them. Please see the [server](https://github.com/fjord-framework/server) repo and follow the instructions there if you have not done so already.
 
 ### Installation Steps
 
@@ -63,7 +63,7 @@ KAFKA_PASSWORD=
 
 ## Next Steps
 
-Congratulations! Your Fjord consumer is now running locally and is attached to your Kafka cluster, ready to consume any incoming message, which it will then publish to Redis. A good next step to continue with Fjord locally is to produce a message. Please see the `producer` repo.
+Congratulations! Your Fjord consumer is now running locally and is attached to your Kafka cluster, ready to consume any incoming message, which it will then publish to Redis. A good next step to continue with Fjord locally is to produce a message. Please see the [producer](https://github.com/fjord-framework/producer) repo.
 
 ## Docker location
 
