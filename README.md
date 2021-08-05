@@ -4,7 +4,7 @@
 
 ## What is the Fjord Consumer?
 
-The Fjord consumer is a process that attaches to a Kafka cluster, consumes records from one or more topics, and publishes consumed data to a Redis Channel. You can use the Fjord consumer to create Kafka a consumer group with multiple Kafka consumers or a so-called _free_ Kafka consumer that operates alone. The Fjord consumer is built to be used alongside the Fjord server, which subscribes to Redis and pushes the published Kafka records to subscribed, connected clients.
+The Fjord consumer is a process that attaches to a Kafka cluster, consumes records from one or more topics, and publishes consumed data to a Redis Channel. You can use the Fjord consumer to create a Kafka consumer group with multiple Kafka consumers or a so-called _free_ Kafka consumer that operates alone. The Fjord consumer is built to be used alongside the Fjord server, which subscribes to Redis and pushes the published Kafka records to subscribed, connected clients.
 
 ## How is the Fjord Consumer Deployed?
 
@@ -23,6 +23,10 @@ If you don't have a cluster, you can clone and use Wurstmeister's `kafka-docker`
 #### Redis
 
 It's also necessary to install and run Redis when running the consumer locally. To do so, you can use the official Docker [image](https://hub.docker.com/_/redis/) or follow Redis's [Quickstart instructions](https://redis.io/topics/quickstart). Make sure Redis is running prior to continuing.
+
+#### Fjord Server
+
+If you're running a complete local setup of all Fjord components, you should already have the Fjord server running by this point as well, so that when Redis receives new records, the server will be able to subscribe and receive them. Please see the `server` repo and follow the instructions there if you have not done so already.
 
 ### Installation Steps
 
