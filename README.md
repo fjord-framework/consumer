@@ -67,4 +67,4 @@ Congratulations! Your Fjord consumer is now running locally and is attached to y
 
 ## Docker location
 
-https://hub.docker.com/r/dockervahid/fjord-consumer
+https://hub.docker.com/r/fjordframework/consumer
