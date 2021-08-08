@@ -63,7 +63,7 @@ KAFKA_PASSWORD=
 
 ## Next Steps
 
-Congratulations! Your Fjord consumer is now running locally and is attached to your Kafka cluster, ready to consume any incoming message, which it will then publish to Redis. A good next step to continue with Fjord locally is to produce a message. Please see the [producer](https://github.com/fjord-framework/producer) repo.
+Congratulations! Your Fjord consumer is now running locally and is attached to your Kafka cluster, ready to consume any incoming message, which it will then publish to Redis. A good next step to continue with Fjord locally is to clone the example `client` repo and open it in a browser. Please see the [client](https://github.com/fjord-framework/client) repo for further instructions.
 
 ## Docker location
 
