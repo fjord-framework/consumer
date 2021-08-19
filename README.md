@@ -1,4 +1,7 @@
-<img src="./readme_materials/fjord_color-graphic.png" alt="Fjord logo" width="200"/>
+<p align="center">
+  <img src="./readme_materials/fjord.png" width="500" height="200" />
+</p>
+
 
 # Fjord Consumer
 
