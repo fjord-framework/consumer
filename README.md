@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./readme_materials/fjord.png" width="500" height="200" />
+  <img src="./readme_materials/fjord.svg" width="500" height="200" />
 </p>
 
 
