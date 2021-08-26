@@ -103,6 +103,6 @@ Here, `toronto_weather` is accessible as `weather`, and additional API topics ar
 
 Congratulations! Your Fjord Consumer is now running locally and is attached to your Kafka cluster, ready to consume any incoming message, which it will then publish to Redis. A good next step to continue with Fjord locally is to clone the example `client` repo and open it in a browser. Please see the [client](https://github.com/fjord-framework/client) repo for further instructions.
 
-## Docker location
+## Docker Image
 
 https://hub.docker.com/r/fjordframework/consumer
