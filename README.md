@@ -10,7 +10,7 @@ The Fjord Consumer is an abstraction for a Kafka consumer group, where each memb
 
 ## How is the Fjord Consumer Deployed?
 
-It's possible to run the Fjord Consumer locally. However, the dockerized consumer is generally intended to be deployed with the entire Fjord infrastructure on AWS, which can be done without using any code in this repo. If you'd like to deploy the entire Fjord infrastructure, please see the [deploy](https://github.com/fjord-framework/deploy) repo. If you wish to test the consumer locally, please continue reading below.
+It's possible to run the Fjord Consumer locally. However, the dockerized consumer is generally intended to be deployed with the entire Fjord infrastructure on AWS, which can be done without using any code in this repo. If you'd like to deploy the entire Fjord infrastructure on AWS using the Fjord CLI, please see the [cli repo](https://github.com/fjord-framework/cli). If you wish to test the consumer locally, please continue reading below.
 
 ## How is the Fjord Consumer Run Locally?
 
@@ -45,6 +45,7 @@ KAFKA_TOPICS=stocks
 API_TOPICS=stocks
 FROM_BEGINNINGS=false
 CONCURRENT_PARTITIONS=1
+STARTING_DELAY_SEC=0
 CONSUMER_GROUP=stocks_group
 REDIS_HOST=localhost
 REDIS_PORT=6379
@@ -56,6 +57,10 @@ KAFKA_PASSWORD=
 `localhost:9092` should work whether you're following Kafka's Quickstart instructions or using Wurstmeister's `kafka-docker` repo. If you know your broker is running on a different socket, please use that.
 
 `FROM_BEGINNINGS` should take one or more space-separated strings `true` or `false`, depending on the number of Kafka consumers in your consumer group. This envrionment variable determines whether each consumer will read from the earliest Kafka offset. If `false`, the consumer will read from the latest offset. Each space-separated string corresponds to one member in the consumer group.
+
+`CONCURRENT_PARTITIONS` allows each Kafka consumer to process several messages at once. This provides a performance optimization for the consumer. If not specified, the default value is `1`, which means messages will not be processed concurrently.
+
+`STARTING_SEC_DELAY` can be specified to add a period of time before which the consumer will not consume new records. If not specified, the consumer will begin consuming records immediately.
 
 #### KAFKA_TOPICS and API_TOPICS
 
